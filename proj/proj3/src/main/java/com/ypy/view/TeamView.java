@@ -1,3 +1,12 @@
+/*
+ * @Description: 对最后的系统进行统一的显示
+ * @Author: YPY
+ * @Date: 2021-10-24 11:55:57
+ * @LastEditTime: 2021-10-24 13:53:27
+ * @LastEditors: YPY
+ * @Reference: 
+ */
+
 package com.ypy.view;
 
 import javax.print.PrintService;
