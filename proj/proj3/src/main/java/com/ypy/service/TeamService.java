@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Author: YPY
+ * @Date: 2021-10-22 20:47:00
+ * @LastEditTime: 2021-11-12 13:38:42
+ * @LastEditors: YPY
+ * @Reference: 
+ */
 package com.ypy.service;
 
 import com.ypy.domain.Architect;
@@ -25,10 +33,20 @@ public class TeamService {
 
         if (isExist(p))
             throw new TeamException("该员工已在本团队中");
-        if (p.getStatus().getName().equals("BUSY")) {
+            //使用枚举类的时候的方法
+/*         if (p.getStatus().getName().equals("BUSY")) {
             throw new TeamException("该员工已是某团队成员");
         } else if (p.getStatus().getName().equals("VOCATION")) {
             throw new TeamException("该员正在休假，无法添加");
+        } */
+
+        switch(p.status){
+            case BUSY:
+            throw new TeamException("该员工已是某团队成员");
+            case VOCATION:
+            throw new TeamException("该员正在休假，无法添加");
+        default:
+            break;
         }
 
         // 判断员工类型和该类型是不是人满了
