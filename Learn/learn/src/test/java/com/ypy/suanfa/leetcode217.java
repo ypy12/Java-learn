@@ -1,0 +1,36 @@
+/*
+ * @Description: 
+ * @Author: YPY
+ * @Date: 2021-11-24 21:08:26
+ * @LastEditTime: 2021-11-24 21:27:34
+ * @LastEditors: YPY
+ * @Reference: 
+ */
+package com.ypy.suanfa;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Test;
+
+public class leetcode217 {
+    public static boolean containsDuplicate(int[] nums) {
+        
+        Arrays.sort(nums);
+        
+        int size=nums.length;
+        if(size<=1){
+            return false;
+        }
+        for(int i=1;i<size;i++){
+            if(nums[i]==nums[i-1]){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        int[] num={4,6,3,5,2,4,6,7};
+        System.out.println(containsDuplicate(num));
+
+    }
+}
