@@ -10,7 +10,7 @@ package com.ypy.suanfa;
 
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
+
 
 public class leetcode217 {
     public static boolean containsDuplicate(int[] nums) {

@@ -10,8 +10,7 @@ package com.ypy.suanfa;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-
+    
 public class leetcode771 {
     public static int numJewelsInStones(String jewels, String stones) {
         Map<Character, Integer> stone = new HashMap<Character, Integer>();

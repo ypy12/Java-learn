@@ -8,8 +8,7 @@
  */
 package com.ypy.suanfa;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class leetcode383 {
     public static boolean canConstruct(String ransomNote, String magazine) {

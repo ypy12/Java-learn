@@ -8,7 +8,7 @@
  */
 package com.ypy.suanfa;
 
-import org.junit.jupiter.api.extension.ExtendWith;
+
 
 public class leetcode242 {
     public static boolean isAnagram(String s, String t) {

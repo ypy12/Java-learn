@@ -2,28 +2,13 @@
  * @Description: 
  * @Author: YPY
  * @Date: 2021-12-01 13:36:30
- * @LastEditTime: 2021-12-01 18:18:02
+ * @LastEditTime: 2021-12-01 21:02:34
  * @LastEditors: YPY
  * @Reference: 
  */
 package com.ypy.suanfa;
 
-class ListNode {
-
-    public ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-
-    int val;
-    ListNode next;
-
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-}
+import com.ypy.suanfa.ListNode;
 
 public class leetcode203 {
     public static ListNode removeElements(ListNode head, int val) {
@@ -40,9 +25,9 @@ public class leetcode203 {
             if (cur.val == val) {
                 pre.next = cur.next;
             } else {
-                pre= cur;
+                pre = cur;
             }
-            cur=cur.next;
+            cur = cur.next;
         }
         return head;
 

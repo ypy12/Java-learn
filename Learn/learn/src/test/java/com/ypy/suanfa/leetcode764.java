@@ -8,8 +8,6 @@
  */
 package com.ypy.suanfa;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class leetcode764 {
     public static int minCostClimbingStairs(int[] cost) {

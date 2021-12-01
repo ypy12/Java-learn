@@ -2,11 +2,12 @@
  * @Description: 
  * @Author: YPY
  * @Date: 2021-12-01 19:07:47
- * @LastEditTime: 2021-12-01 20:26:02
+ * @LastEditTime: 2021-12-01 21:03:29
  * @LastEditors: YPY
  * @Reference: 
  */
 package com.ypy.suanfa;
+
 class ListNode {
     int val;
     ListNode next;
@@ -23,12 +24,14 @@ class ListNode {
 }
 
 public class leetcode83 {
+
     public static ListNode deleteDuplicates(ListNode head) {
-        if(head == null || head.next == null) return head;
+        if (head == null || head.next == null)
+            return head;
         ListNode p = head;
         ListNode p1 = head.next;
-        while(p1 != null) {
-            if(p.val == p1.val)
+        while (p1 != null) {
+            if (p.val == p1.val)
                 p.next = p1.next;
             else
                 p = p.next;
