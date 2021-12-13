@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: YPY
  * @Date: 2021-11-27 21:40:17
- * @LastEditTime: 2021-11-27 22:44:08
+ * @LastEditTime: 2021-12-13 12:16:57
  * @LastEditors: YPY
  * @Reference: 
  */
@@ -10,30 +10,33 @@ package com.ypy.suanfa;
 
 public class leetcode26 {
     public static int removeDuplicates(int[] nums) {
-        int k=0;
-
-        for (int i = 0; i < nums.length; i++) {
-            if (i == nums.length - 1) {
-                break;
-            }
-            int j = i + 1;
-            System.out.println(j);
-            while (nums[i] == nums[j] && j < nums.length - 1) {
-                j++;
-            }
-
-            for (int m = i + 1; m < j; m++) {
-                nums[m] = nums[j];
-            }
-            System.out.println("数值" + nums[i]);
+        if (nums.length <= 1) {
+            return nums.length;
         }
+        int fast = 1;
+        int slow = 0;
+        while (fast <= nums.length - 1) {
+            if (nums[slow] == nums[fast]) {
 
-        return nums.length - k;
+                while (nums[slow] == nums[fast] && fast <= nums.length - 1) {
+                    fast += 1;
+                    if (fast > nums.length - 1) {
+                        return slow + 1;
+                    }
+                }
+                slow = slow + 1;
+                nums[slow] = nums[fast];
+            } else {
+              fast++;
+              slow++;
+            }
+        }
+        return slow + 1;
     }
 
     public static void main(String[] args) {
         int len;
-        int[] nums = new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+        int[] nums = new int[] { 1, 2 };
         len = removeDuplicates(nums);
 
         System.out.println(len);
