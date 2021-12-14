@@ -8,14 +8,14 @@ import java.util.List;
  * @Description: 
  * @Author: YPY
  * @Date: 2021-11-30 12:04:35
- * @LastEditTime: 2021-12-01 19:07:45
+ * @LastEditTime: 2021-12-14 22:34:46
  * @LastEditors: YPY
  * @Reference: 
  */
 
 class ListNode {
 
-    public ListNode(int val) {
+    ListNode(int val) {
         this.val = val;
         this.next = null;
     }
