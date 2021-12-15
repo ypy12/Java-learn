@@ -8,7 +8,7 @@
  */
 package com.ypy.suanfa;
 
-import java.util.List;
+
 
 public class leetcode148 {
     public static ListNode sortList(ListNode head) {

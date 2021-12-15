@@ -2,29 +2,13 @@
  * @Description: 
  * @Author: YPY
  * @Date: 2021-12-01 19:07:47
- * @LastEditTime: 2021-12-01 21:03:29
+ * @LastEditTime: 2021-12-15 23:24:49
  * @LastEditors: YPY
  * @Reference: 
  */
 package com.ypy.suanfa;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    public ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
 public class leetcode83 {
-
     public static ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null)
             return head;
