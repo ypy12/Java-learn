@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class leetcode226 {
@@ -62,6 +63,8 @@ public class leetcode226 {
         for (int i : qianxu) {
             System.out.println(i);
         }
+        Scanner sc = new Scanner(System.in);//Scanner输入流,从键盘接收数据
+        int a = sc.nextInt();
     }
 }
 /*

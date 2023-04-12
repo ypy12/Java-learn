@@ -9,6 +9,7 @@
 package com.ypy.suanfa;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 
@@ -31,6 +32,7 @@ public class leetcode217 {
     public static void main(String[] args) {
         int[] num={4,6,3,5,2,4,6,7};
         System.out.println(containsDuplicate(num));
-
+        Scanner sc = new Scanner(System.in);//Scanner输入流,从键盘接收数据
+        int a = sc.nextInt();
     }
 }

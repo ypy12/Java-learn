@@ -9,6 +9,7 @@
 package com.ypy.suanfa;
 
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class leetcode739 {
@@ -43,6 +44,8 @@ public class leetcode739 {
     public static void main(String[] args) {
         int[] t = new int[] { 73, 74, 75, 71, 69, 72, 76, 73 };
         System.out.println(Arrays.toString(dailyTemperatures(t)));
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
     }
 }
 /*

@@ -8,24 +8,49 @@
  */
 package com.ypy.suanfa;
 
+import java.util.Scanner;
+
 public class leetcode58 {
     public static int lengthOfLastWord(String s) {
-        int length = 1;
-        int index = 1;
-        while (index <=s.length()-1) {
-            if (s.charAt(index) - 32 > 0) {
-                if(s.charAt(index-1)-32==0){
-                    length=0;
-                }
-                length++;
+        // int length = 1;
+        // int index = 1;
+        // while (index <=s.length()-1) {
+        //     if (s.charAt(index) - 32 > 0) {
+        //         if(s.charAt(index-1)-32==0){
+        //             length=0;
+        //         }
+        //         length++;
+        //     }
+        //     index++;
+        // }
+        // return length;
+
+
+
+
+        //第二次
+        int i=s.length()-1;
+        int count=0;
+        while(i>=0){
+            if(s.charAt(i)!=' '){
+                i--;
+                count++;
             }
-            index++;
+            else if(s.charAt(i)==' '&&count==0){
+                i--;
+            }
+            else if(s.charAt(i)==' '&&count!=0){
+                return count;
+            }
+
         }
-        return length;
+        return count;
     }
     public static void main(String[] args) {
-        String s="   fly me   to   the moon  ";
+        String s="a";
         System.out.println(lengthOfLastWord(s));
+        Scanner sc = new Scanner(System.in);//Scanner输入流,从键盘接收数据
+        int a = sc.nextInt();
     }
 }
 /*
